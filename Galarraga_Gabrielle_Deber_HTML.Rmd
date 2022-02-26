@@ -1,0 +1,66 @@
+---
+title: "DEBER_R_HTML"
+author: "Gabrielle Galarraga"
+date: "26/2/2022"
+output:
+  html_document:
+    mathjax: local
+    self_contained: false
+    fig_height: 6
+    fig_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+## Contenidos 
+ 
+# Ejercicio 1
+```{r}
+# Crear un identificador de nombre "ciudad" y asigne como valor el nombre de alguna ciudad
+ ciudad= "Ibarra"
+ciudad
+
+```
+# Ejercicio 2
+
+```{r}
+# Crear un identificador de nombre "pais_andes" y asigne como valor los nombres de los países por donde cruza la cordillera de Los Andes
+pais_andes<-c("Argentina","Bolivia","Chile","Colombia","Ecuador","Perú","Venezuela")
+print(pais_andes)
+```
+
+# Ejercicio 3  
+
+```{r}
+Edades = data.frame(estudiantes = paste0("Estudiantes", 1:12), Nombre = c("Gabrielle", "Marta", "Rosa", "Esteban", "Lola", "Brillo", "Andy", "Mateo", "Marcelaa", "Mika", "Stefania","Andres"), Edades = sample(20:25, 12, replace = TRUE), Hermanos = sample(0:5, 12, replace = TRUE), Hermanas =sample(0:8, 12, replace = TRUE) )
+
+Edades
+
+```
+
+# Ejercicio 4
+```{r}
+# Selección del dataset "DNase"
+?DNase
+
+print(head(DNase, 4))
+
+concentracion = subset(DNase, conc >= 0.1 & conc <= 0.2)
+
+print(concentracion)
+```
+
+```{r}
+# Selección del dataset "DNase"
+?DNase
+
+concentracion2 = subset(DNase, Run != 2 & conc > 0.2 & density <= 1.0)
+
+print(concentracion2)
+
+```
+
