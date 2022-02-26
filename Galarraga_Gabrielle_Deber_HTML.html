@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Gabrielle Galarraga" />
+
+
+<title>DEBER_R_HTML</title>
+
+<script src="Galarraga_Gabrielle_Deber_HTML_files/header-attrs-2.11/header-attrs.js"></script>
+<script src="Galarraga_Gabrielle_Deber_HTML_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="Galarraga_Gabrielle_Deber_HTML_files/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="Galarraga_Gabrielle_Deber_HTML_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="Galarraga_Gabrielle_Deber_HTML_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="Galarraga_Gabrielle_Deber_HTML_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="Galarraga_Gabrielle_Deber_HTML_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="Galarraga_Gabrielle_Deber_HTML_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="Galarraga_Gabrielle_Deber_HTML_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="Galarraga_Gabrielle_Deber_HTML_files/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">DEBER_R_HTML</h1>
+<h4 class="author">Gabrielle Galarraga</h4>
+<h4 class="date">26/2/2022</h4>
+
+</div>
+
+
+<div id="contenidos" class="section level2">
+<h2>Contenidos</h2>
+</div>
+<div id="ejemplo-1-operaciones-fundamentales." class="section level1">
+<h1>1. Ejemplo 1 Operaciones fundamentales.</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>((<span class="dv">4</span><span class="sc">+</span><span class="dv">5</span>)<span class="sc">*</span><span class="dv">10</span>)<span class="sc">/</span><span class="dv">3</span></span></code></pre></div>
+<pre><code>## [1] 30</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span> <span class="dv">10</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">20</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>z<span class="ot">=</span><span class="dv">8</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>q<span class="ot">=</span><span class="dv">11</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span> ((((q<span class="sc">+</span>b)<span class="sc">/</span>a)<span class="sc">+</span>z)<span class="sc">*</span>a)<span class="sc">*</span><span class="fu">log</span>(<span class="fu">exp</span>(<span class="dv">2</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(d)</span></code></pre></div>
+<pre><code>## [1] 222</code></pre>
+</div>
+<div id="ejemplo-2-operaciones-de-realcion." class="section level1">
+<h1>2. Ejemplo 2 Operaciones de realcion.</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Menor </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="sc">&lt;</span> <span class="dv">3</span> </span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Mayor </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&gt;</span> <span class="dv">8</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Igual o menor </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="sc">&lt;=</span>((<span class="dv">8</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">*</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Igual a </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">==</span> (<span class="dv">8</span><span class="sc">/</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No igual a </span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>a <span class="sc">!=</span>b</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparar palabras</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Mariposa&quot;</span> <span class="sc">&lt;</span><span class="st">&quot;Biflora&quot;</span></span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Pasiflora&quot;</span> <span class="sc">&gt;</span><span class="st">&quot;Mariposa1&quot;</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="ejercicio-3-operaciones-lógicas." class="section level1">
+<h1>3. Ejercicio 3 Operaciones Lógicas.</h1>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Operador AND</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">3</span><span class="sc">+</span><span class="dv">4</span>) <span class="sc">&amp;</span> (<span class="dv">8</span><span class="sc">/</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">5</span><span class="sc">&gt;</span><span class="dv">6</span>) <span class="sc">&amp;</span> (<span class="dv">8</span><span class="sc">/</span><span class="dv">2</span><span class="sc">==</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Or y Not</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">5</span><span class="sc">&lt;</span><span class="dv">4</span>) <span class="sc">|</span> (<span class="dv">8</span><span class="sc">/</span><span class="dv">2</span><span class="sc">!=</span><span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="ejercicio-4-operación-de-asignación." class="section level1">
+<h1>4. Ejercicio 4 Operación de asignación.</h1>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Asignación con &quot;&lt;-&quot;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>nombre <span class="ot">&lt;-</span><span class="st">&quot;Gabrielle&quot;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>edad <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>cabello <span class="ot">&lt;-</span> <span class="st">&quot;negro&quot;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Asignación con &quot;=&quot;</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>especie <span class="ot">=</span> <span class="st">&quot;Heliconius erato&quot;</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>sub_especies <span class="ot">=</span> <span class="st">&quot;cyrbia&quot;</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>sub_especies <span class="ot">&lt;-</span> <span class="st">&quot;Melpomene&quot;</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>Alimentacion <span class="ot">&lt;-</span> <span class="st">&quot;Polen&quot;</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Asignación con &quot;&lt;&lt;-&quot;</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>Ciudad <span class="ot">&lt;&lt;-</span><span class="st">&quot;Tena&quot;</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>altura <span class="ot">&lt;&lt;-</span> <span class="dv">598</span> <span class="co"># medido en metros</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>latitud <span class="ot">&lt;&lt;-</span> <span class="sc">-</span><span class="fl">0.989</span> </span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>longitud <span class="ot">&lt;&lt;-</span> <span class="sc">-</span><span class="fl">77.815</span> <span class="co"># Oeste</span></span></code></pre></div>
+</div>
+<div id="ejercicio-5-vectores" class="section level1">
+<h1>5. Ejercicio 5 Vectores</h1>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>Numeros <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>,<span class="dv">13</span>,<span class="dv">14</span>,<span class="dv">15</span>,<span class="dv">16</span>,<span class="dv">17</span>,<span class="dv">18</span>,<span class="dv">19</span>,<span class="dv">20</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>Especies_Heliconius <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;CYR&quot;</span>, <span class="st">&quot;LAT&quot;</span>, <span class="st">&quot;HIM&quot;</span>, <span class="st">&quot;MEL&quot;</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>ciudades <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">c</span>(<span class="st">&quot;ciudad1&quot;</span>, <span class="st">&quot;ciudad2&quot;</span>, <span class="st">&quot;ciudad3&quot;</span>)) </span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># verificar el tipo de dato</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(Numeros)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># número de elementos del vector </span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(Numeros)</span></code></pre></div>
+<pre><code>## [1] 21</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># escoger un solo elemento del vector</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>Numeros[<span class="dv">6</span>]</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># escoger todos excepto el primer elemento del vector</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>Numeros[<span class="sc">-</span><span class="dv">1</span>]</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># escoger algunos elementos del vector</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>Numeros[<span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>]</span></code></pre></div>
+<pre><code>## [1] 2 3 4 5</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Operar con escalares </span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>Numeros<span class="sc">*</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1]  2  5  8 11 14 17 20 23 26 29 32 35 38 41 44 47 50 53 56 59 62</code></pre>
+</div>
+<div id="ejercicio-6-matrices" class="section level1">
+<h1>6. Ejercicio 6 Matrices</h1>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear una matriz uniendo vectores como columna</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>Nombres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Mariana&quot;</span>, <span class="st">&quot;Andres&quot;</span>, <span class="st">&quot;Stefania&quot;</span>, <span class="st">&quot;Marta&quot;</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>poblacion <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.87</span>, <span class="fl">2.98</span>, <span class="fl">0.55</span>, <span class="fl">0.32</span>) <span class="co"># millones de personas</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>altura <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.60</span>,<span class="fl">1.80</span>,<span class="fl">1.65</span>,<span class="fl">1.55</span>) <span class="co"># sobre el nivel del mar</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>datos_Nombres <span class="ot">&lt;-</span> <span class="fu">cbind</span>(Nombres, poblacion, altura)</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>datos_Nombres</span></code></pre></div>
+<pre><code>##      Nombres    poblacion altura
+## [1,] &quot;Mariana&quot;  &quot;2.87&quot;    &quot;1.6&quot; 
+## [2,] &quot;Andres&quot;   &quot;2.98&quot;    &quot;1.8&quot; 
+## [3,] &quot;Stefania&quot; &quot;0.55&quot;    &quot;1.65&quot;
+## [4,] &quot;Marta&quot;    &quot;0.32&quot;    &quot;1.55&quot;</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear una matriz uniendo vectores como filas</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>especie1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;LAT&quot;</span>, <span class="dv">20</span>, <span class="st">&quot;Napo&quot;</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>especie2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;CYR&quot;</span>, <span class="dv">10</span>, <span class="st">&quot;Cuenca&quot;</span>)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>especie3 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;HIM&quot;</span>, <span class="dv">50</span>, <span class="st">&quot;Loja&quot;</span>)</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>especie4 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;MEL&quot;</span>, <span class="dv">2</span>, <span class="st">&quot;Quito&quot;</span>)</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>especie5 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;HEL&quot;</span>, <span class="dv">1</span>, <span class="st">&quot;Otavalo&quot;</span>)</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>diversidad <span class="ot">&lt;-</span> <span class="fu">rbind</span>(especie1, especie2, especie3, especie4, especie5)</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>diversidad</span></code></pre></div>
+<pre><code>##          [,1]  [,2] [,3]     
+## especie1 &quot;LAT&quot; &quot;20&quot; &quot;Napo&quot;   
+## especie2 &quot;CYR&quot; &quot;10&quot; &quot;Cuenca&quot; 
+## especie3 &quot;HIM&quot; &quot;50&quot; &quot;Loja&quot;   
+## especie4 &quot;MEL&quot; &quot;2&quot;  &quot;Quito&quot;  
+## especie5 &quot;HEL&quot; &quot;1&quot;  &quot;Otavalo&quot;</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># número de elementos de la matriz </span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(datos_Nombres)</span></code></pre></div>
+<pre><code>## [1] 4 3</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># escoger un solo elemento de la matriz</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>diversidad[<span class="dv">2</span>,<span class="dv">1</span>] <span class="co"># elemento de la fila 2 y columna 1</span></span></code></pre></div>
+<pre><code>## especie2 
+##    &quot;CYR&quot;</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(diversidad) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Especies&quot;</span>, <span class="st">&quot;Catidad&quot;</span>,<span class="st">&quot;Ciudades&quot;</span> )</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>diversidad</span></code></pre></div>
+<pre><code>##          Especies Catidad Ciudades 
+## especie1 &quot;LAT&quot;    &quot;20&quot;    &quot;Napo&quot;   
+## especie2 &quot;CYR&quot;    &quot;10&quot;    &quot;Cuenca&quot; 
+## especie3 &quot;HIM&quot;    &quot;50&quot;    &quot;Loja&quot;   
+## especie4 &quot;MEL&quot;    &quot;2&quot;     &quot;Quito&quot;  
+## especie5 &quot;HEL&quot;    &quot;1&quot;     &quot;Otavalo&quot;</code></pre>
+</div>
+<div id="ejercicio-7-data-frames" class="section level1">
+<h1>7. Ejercicio 7 Data Frames</h1>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>Edades <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">estudiante =</span> <span class="fu">paste0</span>(<span class="st">&quot;Alumno&quot;</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="at">calificacion =</span> <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>Edades</span></code></pre></div>
+<pre><code>##    estudiante calificacion
+## 1     Alumno1            6
+## 2     Alumno2            6
+## 3     Alumno3            6
+## 4     Alumno4            7
+## 5     Alumno5            5
+## 6     Alumno6            4
+## 7     Alumno7            7
+## 8     Alumno8            8
+## 9     Alumno9            7
+## 10   Alumno10            6</code></pre>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "Galarraga_Gabrielle_Deber_HTML_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
